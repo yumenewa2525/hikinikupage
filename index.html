@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DJひきにくです！！</title>
+</head>
+<body>
+    <h1>DJひきにくです！！！</h1>
+  <button id="play-button">ひきにくです！</button>
+  
+  <audio id="audio" src="hikiniku.mp3"></audio>
+
+
+  <style>
+    #play-button {
+      width: 500px;
+      height: 500px;
+      border-radius: 500px;
+      font-size: 50px;
+      font-weight: bold;
+      color: #9b1c1c;
+      text-shadow: 2px 10px 10px rgba(155, 24, 24, 0.5);
+      background-image: url(hikiniku.jpg);
+    }
+    h1 {
+  position: absolute;
+  top: 20px;
+  left: 55%;
+  transform: translateX(-50%);
+  color: #000000;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+#bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+    
+  </style>
+
+  <script>
+    const playButton = document.getElementById('play-button');
+    const audio = document.getElementById('audio');
+    
+    playButton.addEventListener('click', () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+  </script>
+
+</body>
+</html>
