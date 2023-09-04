@@ -20,7 +20,7 @@
   <button id="play-button">ひきにくです！</button>
 
   <div id="count"></div>
-  <div id="total"></div>
+
   
   <audio id="audio" src="hikiniku.mp3"></audio>
 
@@ -63,19 +63,13 @@
     const playButton = document.getElementById('play-button');
     const audio = document.getElementById('audio');
     const countDiv = document.getElementById('count');
-    const totalDiv = document.getElementById('total');
     let count = 0;
-    let totalCount = getCookie('total') || 0;
 
     playButton.addEventListener('click', () => {
       audio.currentTime = 0;
       audio.play();
-      sessionCount++;
-      totalCount++;
-  
       count++;
       countDiv.innerText = count + 'ひきにくです！！！'; // countDivを参照
-      totalDiv.innerText = '過去のトータル：'+totalCount+'ひきにくです！！！' ;
     });
 
     
