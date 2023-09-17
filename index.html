@@ -54,13 +54,18 @@
     const audio = document.getElementById('audio'); 
     const countDiv = document.getElementById('count'); 
     let count = 0;
-    // キーボードのkeydownイベントを検知
-    document.addEventListener('keydown' or 'click', () => {
+    playButton.addEventListener('click', () => {
       audio.currentTime = 0;
       audio.play();
       count++;
-      countDiv.innerText = count + 'ひきにくです！！！';
-});
+      countDiv.innerText = count + 'ひきにくです！！！'; // countDivを参照
+    });
+    document.addEventListener('keydown', () => {
+      audio.currentTime = 0;
+      audio.play();
+      count++;
+      countDiv.innerText = count + 'ひきにくです！！！'; // countDivを参照
+    });
 
 
     
