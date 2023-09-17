@@ -50,17 +50,16 @@
   </style>
 
   <script>
-    const playButton = document.getElementById('play-button');
-    const audio = document.getElementById('audio');
-    const countDiv = document.getElementById('count');
-    let count = 0;
-
-    playButton.addEventListener('click', () => {
-      audio.currentTime = 0;
-      audio.play();
-      count++;
-      countDiv.innerText = count + 'ひきにくです！！！'; 
-    });
+    const playButton = document.getElementById('play-button'); 
+    const audio = document.getElementById('audio'); 
+    const countDiv = document.getElementById('count'); let count = 0;
+    // キーボードのkeydownイベントを検知
+    document.addEventListener('keydown', () => {
+    audio.currentTime = 0;
+    audio.play();
+    count++;
+    countDiv.innerText = count + 'ぴんぽんぱんぽーん';
+});
 
     
 
